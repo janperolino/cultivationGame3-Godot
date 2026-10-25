@@ -8,7 +8,7 @@ Windows desktop first, Godot selected; browser play is no longer required. Use t
 
 The existing scripts implement a 512m vertex height field, 64 dirty mesh chunks, orthographic follow camera, bounded screen-relative flight/altitude/zoom, placeholder instanced foliage/buildings/player, and a single crater technique capped at 12m. Shift currently means fast flight (45m/s versus 22m/s), not the browser's qi-cost dash. Native cast range/timing/shape differ. Aim currently marches in 2m increments; it is not final accurate terrain/actor targeting. No enemies, health/qi, physical cover or terrain colliders, host authority, multiplayer, recovery, persistence or production painted assets exist. Terrain clearance is a controller clamp, not complete collision.
 
-Prior starter evidence: editor import, headless scene, terrain smoke and native D3D12 render passed; [capture](native-study.png) showed warmed idle 60fps. This is historical idle evidence, not a sustained combat benchmark or final-art approval. This planning pass changes documentation only. The first scene looking alright does not accept the complete migration.
+Prior starter evidence: editor import, headless scene, terrain smoke and native D3D12 render passed; [capture](archive/native-study.png) showed warmed idle 60fps. This is historical idle evidence, not a sustained combat benchmark or final-art approval. This planning pass changes documentation only. The first scene looking alright does not accept the complete migration.
 
 ## Reference and preservation
 

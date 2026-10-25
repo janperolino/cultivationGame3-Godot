@@ -12,7 +12,7 @@ From the existing native project root, with `$Godot` set to the 4.7.2 console ex
 & $Godot --headless --path . --quit-after 120
 ```
 
-Record exit codes and parse/error output. Headless rendering does not validate D3D12 visuals; run a native window separately. Do not overwrite `docs/native-study.png` merely to rerun smoke. Add native headless suites as their rules appear, with failures exiting nonzero. Existing `assert` tests require assertions enabled; exported release test runners must use explicit failure reporting.
+Record exit codes and parse/error output. Headless rendering does not validate D3D12 visuals; run a native window separately. Do not overwrite `docs/archive/native-study.png` merely to rerun smoke. Add native headless suites as their rules appear, with failures exiting nonzero. Existing `assert` tests require assertions enabled; exported release test runners must use explicit failure reporting.
 
 ## Test layers
 

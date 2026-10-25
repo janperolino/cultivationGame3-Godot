@@ -21,7 +21,7 @@ The game lives in `new-game-project/` (open `project.godot` there; it never move
 
 **Planning sessions** happen between phases whenever Jan wants one. They discuss the design and edit the design docs and `plan.md`, never code. Each one adds a Log line and commits on its own as `design: <summary>`, separate from any phase commit. Sessions may run in parallel, each in its own worktree on its own branch: a worktree session edits only its own phase's lines in this file (its Status tick, its spec, its Log entry), so merges stay clean, and the design sessions, which all edit the design docs, run one at a time on `main`.
 
-**At each milestone's close** (the parity gate after N6b, then each campaign stage), the planning session that opens the next design session compacts this file, since every session reads Status and Open questions: the milestone's phase specs, its Log entries and the Open questions it settled move verbatim to `docs/plan-archive.md`, after any rule that lived only here is written into the design or architecture doc. Open questions keeps what is open, what awaits Jan's review, and what the running milestone settled that its next phases still read; the Log keeps the running milestone in full and one line a phase for the rest.
+**At each milestone's close** (the parity gate after N6b, then each campaign stage), the planning session that opens the next design session compacts this file, since every session reads Status and Open questions: the milestone's phase specs, its Log entries and the Open questions it settled move verbatim to `docs/archive/plan-archive.md`, after any rule that lived only here is written into the design or architecture doc. Open questions keeps what is open, what awaits Jan's review, and what the running milestone settled that its next phases still read; the Log keeps the running milestone in full and one line a phase for the rest.
 
 ## Status
 
@@ -74,7 +74,7 @@ The game lives in `new-game-project/` (open `project.godot` there; it never move
 - [ ] N11 Production: N11a the tools and content contract, N11b onward the campaign batches to the approved ending
 - [ ] N12 Release: N12a hardening, N12b the Windows package and distribution rehearsal (publishing stays a separate call of Jan's)
 
-The campaign stages' first results and exit checks are in `docs/plan-archive.md` under the migration roadmap, until their design sessions write them here.
+The campaign stages' first results and exit checks are in the parked migration roadmap, `docs/archive/IMPLEMENTATION_PLAN.md`, until their design sessions write them here.
 
 ## Open questions
 
@@ -214,4 +214,4 @@ Physical destruction can stall mesh and collider rebuilds or flood replication: 
 
 ### Planning
 
-- **design: version control and this plan** (2026-10-25): the browser M2 work committed and pushed to `cultivationCombat3` (`ca2334e`); `cultivationGame3-Godot` became its own repo, pushed to `cultivationGame3-Godot`. The roadmap, status and workflow folded into this file in the session-per-phase format (Jan's call); the old roadmap table moved to `docs/plan-archive.md`, and `STATUS.md`, `IMPLEMENTATION_PLAN.md`, `WORKFLOW.md` and the N1 brief now point here.
+- **design: version control and this plan** (2026-10-25): the browser M2 work committed and pushed to `cultivationCombat3` (`ca2334e`); `cultivationGame3-Godot` became its own repo, pushed to `cultivationGame3-Godot`. The roadmap, status and workflow folded into this file in the session-per-phase format (Jan's call); the old status, roadmap, workflow, N1 brief, N0 handoff and starter capture are parked in `docs/archive/` (Godot skips it).
