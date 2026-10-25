@@ -1,0 +1,12 @@
+# Godot editor cache and export output
+.godot/
+/export/
+/build/
+*.tmp
+
+# Local credentials and signing material
+.env
+.env.*
+!.env.example
+*.keystore
+*.pfx
