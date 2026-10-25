@@ -1,6 +1,6 @@
 # Severed Heaven — native migration
 
-2026-10-25. This Godot project's documentation is the source of truth for future native work. [Status](STATUS.md), [architecture](ARCHITECTURE.md), [parity inventory](PARITY.md), [sole active roadmap](IMPLEMENTATION_PLAN.md), [verification](VERIFICATION.md), [workflow](WORKFLOW.md). Product intent: [design](GAME_DESIGN.md), [opening](OPENING_CHAPTER.md), [art](ART_DIRECTION.md).
+2026-10-25. This Godot project's documentation is the source of truth for future native work. [Build plan](../../plan.md) (status, roadmap and workflow), [architecture](ARCHITECTURE.md), [parity inventory](PARITY.md), [verification](VERIFICATION.md). Product intent: [design](GAME_DESIGN.md), [opening](OPENING_CHAPTER.md), [art](ART_DIRECTION.md).
 
 ## Decision and actual baseline
 

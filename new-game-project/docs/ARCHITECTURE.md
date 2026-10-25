@@ -1,6 +1,6 @@
 # Native architecture contract
 
-2026-10-25. Planned boundaries; no empty framework or port is implemented by this document. [Roadmap](IMPLEMENTATION_PLAN.md).
+2026-10-25. Planned boundaries; no empty framework or port is implemented by this document. [Build plan](../../plan.md).
 
 ## Simulation and coordinates
 

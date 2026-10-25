@@ -96,6 +96,6 @@ Players should recognize both the original ruined courtyard and the change they 
 
 ## Chapter dependencies
 
-Implementation sequence is owned solely by the [native roadmap](IMPLEMENTATION_PLAN.md): N1–N6 prove native combat/co-op/visual parity; N7 establishes saves, transactions and travel; N8 develops guardian, sanctuary, fugitives/refuge/founding and chapter art. This section is not a second roadmap. Story/layout details remain proposals until their phase decisions.
+Implementation sequence is owned solely by the [build plan](../../plan.md): N1–N6 prove native combat/co-op/visual parity; N7 establishes saves, transactions and travel; N8 develops guardian, sanctuary, fugitives/refuge/founding and chapter art. This section is not a second roadmap. Story/layout details remain proposals until their phase decisions.
 
 Do not wait for a complete art library to test the chapter, and do not label a generated concept as implemented gameplay.

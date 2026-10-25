@@ -1,6 +1,6 @@
 # Native parity inventory
 
-2026-10-25. Paths below are relative to preserved browser reference `C:\Users\janpe\CMPTProjects\cultivationGame3`; they are evidence locations, not runtime dependencies. All native phase states are in the [roadmap](IMPLEMENTATION_PLAN.md). Reuse means intent/data/evidence, not executable TypeScript in Godot.
+2026-10-25. Paths below are relative to preserved browser reference `C:\Users\janpe\CMPTProjects\cultivationGame3`; they are evidence locations, not runtime dependencies. All native phase states are in the [build plan](../../plan.md). Reuse means intent/data/evidence, not executable TypeScript in Godot.
 
 | Area / reference | Treatment | Native baseline and acceptance destination |
 | --- | --- | --- |

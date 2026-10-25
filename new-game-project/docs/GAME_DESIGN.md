@@ -1,12 +1,12 @@
 # Severed Heaven — Full Game Design
 
-Native product draft · updated 2026-10-25 · Companion: [implementation plan](IMPLEMENTATION_PLAN.md)
+Native product draft · updated 2026-10-25 · Companion: [build plan](../../plan.md)
 
 Detailed specifications: [opening chapter](OPENING_CHAPTER.md) · [art direction and endorsed concept](ART_DIRECTION.md).
 
 ## 1. Direction and decision status
 
-**Platform decision, 2026-10-25:** Windows desktop in the existing Godot project; browser play is no longer required. Native phase scope and implementation status live in [STATUS](STATUS.md) and the [roadmap](IMPLEMENTATION_PLAN.md).
+**Platform decision, 2026-10-25:** Windows desktop in the existing Godot project; browser play is no longer required. Native phase scope and implementation status live in the [build plan](../../plan.md).
 
 **User-confirmed direction:** a multiplayer cooperative cultivation RPG with duels, challenges, varied builds, exploration, secret realms, progression, factions, and a story. Fidelity to cultivation tropes and themes is a core requirement.
 
@@ -207,4 +207,4 @@ Decision log, 2026-10-24: user endorsed the design and confirmed fallen-sect res
 
 Decision log, 2026-10-24: user selected outsiders fleeing an unresolved danger and discovering the sect ruins as the opening premise. Shelter precedes the decision to rebuild. Carried into native opening/onboarding N8. Pursuers and the sect's history remain open.
 
-Decision log, 2026-10-25: native Windows desktop in the existing Godot project replaces the browser product path. [Native roadmap](IMPLEMENTATION_PLAN.md) is authoritative. Godot starter is comparison-only; sect restoration, cultivation, exploration and co-op direction remain unchanged.
+Decision log, 2026-10-25: native Windows desktop in the existing Godot project replaces the browser product path. [Build plan](../../plan.md) is authoritative. Godot starter is comparison-only; sect restoration, cultivation, exploration and co-op direction remain unchanged.
