@@ -21,30 +21,46 @@ The game lives in `new-game-project/` (open `project.godot` there; it never move
 
 **Planning sessions** happen between phases whenever Jan wants one. They discuss the design and edit the design docs and `plan.md`, never code. Each one adds a Log line and commits on its own as `design: <summary>`, separate from any phase commit. Sessions may run in parallel, each in its own worktree on its own branch: a worktree session edits only its own phase's lines in this file (its Status tick, its spec, its Log entry), so merges stay clean, and the design sessions, which all edit the design docs, run one at a time on `main`.
 
-**At each milestone's close** (the parity gate after N6b, then each campaign stage), the planning session that opens the next design session compacts this file, since every session reads Status and Open questions: the milestone's phase specs, its Log entries and the Open questions it settled move verbatim to `docs/archive/plan-archive.md`, after any rule that lived only here is written into the design or architecture doc. Open questions keeps what is open, what awaits Jan's review, and what the running milestone settled that its next phases still read; the Log keeps the running milestone in full and one line a phase for the rest.
+**At each milestone's close** (M1 at N6b, then each milestone after), the planning session that opens the next design session compacts this file, since every session reads Status and Open questions: the milestone's phase specs, its Log entries and the Open questions it settled move verbatim to `docs/archive/plan-archive.md`, after any rule that lived only here is written into the design or architecture doc. Open questions keeps what is open, what awaits Jan's review, and what the running milestone settled that its next phases still read; the Log keeps the running milestone in full and one line a phase for the rest.
 
 ## Status
 
-**The lines at a glance** (planning, 2026-10-25). Read down a column for a line's order; rows aren't dates. Bold is a design session; ✓ is done.
+**The lines at a glance** (planning, 2026-10-25). Read down a column for a line's order; rows aren't dates, but a design session sits on the row before the first phase that needs it. Bold is a design session; ✓ is done.
 
-| Port line (parity)       | Design line                  | Art line                 |
-| ------------------------ | ---------------------------- | ------------------------ |
-| ✓ N0 Migration planning  | **D1 Worlds and saves** ¹    | A0 Courtyard kit ²       |
-| N1 Authority, terrain    | **D2 The opening's calls** ¹ |                          |
-| N2a Movement, world      | **D3 The first two paths** ¹ |                          |
-| N2b Solo combat          | **D4 Release and hosting** ¹ |                          |
-| N3 Two processes         |                              |                          |
-| N4a Responsive clients   |                              |                          |
-| N4b Recovery             |                              |                          |
-| N5a Skirmish AI          |                              |                          |
-| N5b Encounter lifecycle  |                              |                          |
-| N6a Presentation slice   |                              | ← A0's kit lands here    |
-| N6b Parity gate          |                              |                          |
-| →                        | **The campaign** ³           |                          |
+| Main line                    | Design line                  | Art line               |
+| ---------------------------- | ---------------------------- | ---------------------- |
+| ✓ N0 Migration planning      |                              | A0 Courtyard kit ¹     |
+| N1 Authority, terrain        |                              |                        |
+| N2a Movement, world          |                              |                        |
+| N2b Solo combat              |                              |                        |
+| N3 Two processes             |                              |                        |
+| N4a Responsive clients       |                              |                        |
+| N4b Recovery                 |                              |                        |
+| N5a Skirmish AI              |                              |                        |
+| N5b Encounter lifecycle      |                              |                        |
+| N6a Presentation slice       |                              | ← A0's kit lands here  |
+| N6b Parity gate ²            | **D1 Worlds and saves**      |                        |
+| N7a Saves, world identity    |                              |                        |
+| N7b Rewards, restoration     |                              |                        |
+| N7c Region travel            |                              |                        |
+| N8a The guardian             |                              |                        |
+| N8b Sanctuary expedition     | **D2 The opening's calls**   |                        |
+| N8c Fugitives and founding   |                              | N8d Opening art kit    |
+|                              | **D3 The first two paths**   |                        |
+| N9a Method and mastery       |                              |                        |
+| N9b First breakthrough       |                              |                        |
+| N10a Sect and factions       |                              |                        |
+| N10b Challenges and duels    |                              |                        |
+| N11a Tools, content contract |                              |                        |
+| N11b+ Campaign batches       | **D4 Release and hosting**   |                        |
+| N12a Hardening               |                              |                        |
+| N12b Windows package         |                              |                        |
 
-¹ Any time before the phase it gates (D1 before N7, D2 before N8, D3 before N9, D4 before N12), never in parallel with another design session. ² Proposed, awaiting Jan's yes (Open questions). ³ Needs N6b and D1; the lines join here.
+¹ Proposed, awaiting Jan's yes (Open questions). ² Closes the migration; nothing below it starts before it passes. Design sessions run one at a time, any time before the phase they gate.
 
-*The port line* (the browser's proven combat and co-op, rebuilt natively; specs under The phases):
+The milestones below keep the detail; specs are under The phases. N1–N6b are full specs. N7a onward are outlines (what it needs, what it first builds, what proves it), and each milestone's design or planning session turns its outlines into full one-session specs, splitting them where they're too big, the way N1–N6b were.
+
+*M1 Parity: the browser's proven combat and co-op, rebuilt natively*
 
 - [x] N0 Migration planning (native docs, parity inventory, architecture; both repos under version control)
 - [ ] N1 Fixed-step authority and terrain contract
@@ -56,25 +72,44 @@ The game lives in `new-game-project/` (open `project.godot` there; it never move
 - [ ] N5a Skirmish AI and telegraphs
 - [ ] N5b The encounter lifecycle
 - [ ] N6a The native presentation and art slice
-- [ ] N6b The parity and performance gate (closes the migration; the campaign doesn't start before it)
+- [ ] N6b The parity and performance gate
 
-*The design line* (the open calls, each settled before the phase that needs it; Open questions lists what each one covers):
+*M2 Saves, transactions and travel* (needs N6b and D1)
 
-- [ ] D1 Design: worlds, saves and shared rewards (before N7)
-- [ ] D2 Design: the opening's open calls (before N8)
-- [ ] D3 Design: the first two paths (before N9)
-- [ ] D4 Design: release, hosting and hardware (before N12)
+- [ ] D1 Design: worlds, saves and shared rewards
+- [ ] N7a Saves and world identity
+- [ ] N7b Rewards and restoration transactions
+- [ ] N7c Connected region travel
 
-*The campaign* (after the parity gate; each stage is expanded into one-session phases at its design session or planning session, the way N1–N6b were):
+*M3 The opening* (N8a needs only N6b and can start early; N8b needs N7c; D2 comes before N8c)
 
-- [ ] N7 Saves, transactions and travel: N7a saves and world identity, N7b rewards and restoration transactions, N7c connected region travel
-- [ ] N8 The opening: N8a the guardian, N8b the sanctuary expedition, N8c fugitives and founding, N8d the opening's art and audio kit
-- [ ] N9 Cultivation: N9a method and mastery, N9b the first breakthrough
-- [ ] N10 The sect and the world: N10a sect and faction consequences, N10b challenges and duels
-- [ ] N11 Production: N11a the tools and content contract, N11b onward the campaign batches to the approved ending
-- [ ] N12 Release: N12a hardening, N12b the Windows package and distribution rehearsal (publishing stays a separate call of Jan's)
+- [ ] D2 Design: the opening's open calls
+- [ ] N8a The guardian
+- [ ] N8b The sanctuary expedition
+- [ ] N8c Fugitives and founding
+- [ ] N8d The opening's art and audio kit
 
-The campaign stages' first results and exit checks are in the parked migration roadmap, `docs/archive/IMPLEMENTATION_PLAN.md`, until their design sessions write them here.
+*M4 Cultivation* (needs N8d and D3)
+
+- [ ] D3 Design: the first two paths
+- [ ] N9a Method and mastery
+- [ ] N9b The first breakthrough
+
+*M5 The sect and the world*
+
+- [ ] N10a Sect and faction consequences
+- [ ] N10b Challenges and duels
+
+*M6 Production: the campaign to its ending*
+
+- [ ] N11a The tools and content contract
+- [ ] N11b onward: the campaign batches, one approved region, story and restoration batch at a time, to the approved ending
+
+*M7 Release* (needs the finished campaign and D4)
+
+- [ ] D4 Design: release, hosting and hardware
+- [ ] N12a Release hardening
+- [ ] N12b The Windows package and distribution rehearsal (publishing stays a separate call of Jan's)
 
 ## Open questions
 
@@ -202,16 +237,54 @@ Each spec says what to read, what to build, and what proves it. "Browser" paths 
 
 **Done when:** the recorded machine meets the budgets in `VERIFICATION.md` (proposal: p95 frame ≤16.7ms, p99 ≤33.3ms, host step p95 ≤8ms); canonical state matches across clients; every named browser regression maps to a native test or an approved difference; feel and readability feedback is written down. This closes the migration; the planning session after it compacts this file.
 
+### Outlines: M2 onward
+
+These come from the migration roadmap (parked in `docs/archive/IMPLEMENTATION_PLAN.md`). Each is one line of needs, a first result and the checks that prove it; its milestone's design or planning session writes the full spec here before a session builds it.
+
+**M2 Saves, transactions and travel**
+
+- **N7a Saves and world identity.** Needs N6b and D1. Versioned settings, character and world saves in `user://` with one stable region, written atomically with a previous-good backup. Done when a restart keeps the exact scars, cover and build, and interrupted, corrupt or incompatible save fixtures recover without overwriting the original; the browser-save import decision is recorded.
+- **N7b Rewards and restoration transactions.** Needs N7a. One inventory, reward, contribution and spend transaction with transaction IDs. Done when a repeated completion or a reconnect can't award twice or charge twice, unauthorised shared spending is rejected, and the guest credit and portability policy is in place.
+- **N7c Connected region travel.** Needs N7b. Two test regions, one active party region. Done when you can damage A, visit B, restart and return to A with the same scars, and a transition survives a disconnect atomically. No split parties without a decision.
+
+**M3 The opening**
+
+- **N8a The guardian.** Needs N6b. One multi-target guardian with altitude cues and openings for solo and co-op. Done when solo and two players can finish, retreat and retry, and its mechanics stay readable under sustained effects. No rewards until N7b.
+- **N8b The sanctuary expedition.** Needs N7c and N8a. Prepare, a wilderness route, a two-node puzzle, the inheritance choice and the return. Done when one whole secret-realm expedition runs without developer controls, the instance-reset versus persistent-terrain policy is explicit, and protected quest routes can't softlock.
+- **N8c Fugitives and founding.** Needs N8b and D2. The approach and shelter, recovering resources, the first protective restoration and the decision to stay. Done when solo and co-op playtests of `OPENING_CHAPTER.md` show players understand the goal and see the restoration, without erasing wilderness scars. 20–30 minutes is a proposal; measure it.
+- **N8d The opening's art and audio kit.** Needs N8c and N6a's proven kit. The original kit extended across the opening. Done when it reads at gameplay scale in intact, ruined and restored states, every asset has its origin and licence in the manifest, and the chapter holds its performance budgets.
+
+**M4 Cultivation**
+
+- **N9a Method and mastery.** Needs N8d and D3. The first two paths, one method each with deliberate technique variation. Done when both make distinct viable solo and co-op builds with clear requirements; the arena presets aren't reused as campaign paths.
+- **N9b The first breakthrough.** Needs N9a. Qi Gathering to Foundation preparation, a peaceful support activity and a trial. Done when preparation and insight unlock a useful new traversal or combat option, the failure policy is approved and recoverable, and no idle grind is needed to test it.
+
+**M5 The sect and the world**
+
+- **N10a Sect and faction consequences.** Needs N9b. Two faction interests, one recruited specialist, one restoration stage. Done when access, relationships and prosperity visibly change and host governance and spending are clear. No raids or upkeep simulation yet.
+- **N10b Challenges and duels.** Needs N10a. One repeatable challenge and a consensual one-on-one duel. Done when stakes, cancel, leave, defeat and reward replay are checked, with separate tuning; no ranked service. Four players stay gated by measured budgets and Jan's approval.
+
+**M6 Production**
+
+- **N11a The tools and content contract.** Needs N10b. Validation for authored encounter, quest, loot and region graphs, and a measured authoring rate. Done when finite region, realm and path counts and the ending's scope are set from that capacity, and unreachable quests and missing references are caught before a build.
+- **N11b onward, the campaign batches.** Needs N11a. One approved region, story and restoration batch at a time. Done when fresh-character solo and co-op runs keep geography, quest safety and build viability; batches repeat to the approved ending, then one full campaign review. No promise of endless content.
+
+**M7 Release**
+
+- **N12a Release hardening.** Needs the approved campaign and D4. Accessibility, remapping, save upgrades, an abuse and recovery audit. Done when the minimum hardware and network limits are chosen, every released save schema has a migration fixture, licences are in order and no campaign blockers remain.
+- **N12b The Windows package and distribution rehearsal.** Needs N12a. Matching 4.7.2 export templates, a clean-machine export, upgrade and uninstall (or portable) test. Done when offline solo and the chosen co-op mode run without the editor, user data survives an update, and the signing, channel, support and relay costs are recorded. Publishing is a separate call of Jan's.
+
 ## Risks
 
 Physical destruction can stall mesh and collider rebuilds or flood replication: dirty-chunk budgets, canonical queries, revisioned transfers and measured mutation limits come before larger regions. D3D12 on integrated GPUs needs real minimum-hardware evidence; a renderer fallback needs visual and physics checks. Jolt isn't deterministic across peers, so one authority stays. Painted sprites and billboards can hide altitude and fight 3D lighting: prove one kit before volume art. Direct UDP doesn't solve NAT or security: cost a relay before promising internet play. A full save is broader than a display snapshot: schemas and transactions come before campaign rewards. Large content ambition needs a measured authoring rate and a finite ending; cut counts rather than drop sect restoration, cultivation, exploration or co-op.
 
 ## Log
 
-### Port line
+### M1 Parity
 
 - **N0 Migration planning** (2026-10-25): native docs written in `docs/` (migration, architecture, parity, verification) and the design, opening and art docs copied over with native amendments; the browser docs point here. The starter scene is solo flight, terrain and crater only, placeholder art. Next is N1; no product call blocks it.
 
 ### Planning
 
 - **design: version control and this plan** (2026-10-25): the browser M2 work committed and pushed to `cultivationCombat3` (`ca2334e`); `cultivationGame3-Godot` became its own repo, pushed to `cultivationGame3-Godot`. The roadmap, status and workflow folded into this file in the session-per-phase format (Jan's call); the old status, roadmap, workflow, N1 brief, N0 handoff and starter capture are parked in `docs/archive/` (Godot skips it).
+- **design: all milestones visible** (2026-10-25): Status now lists M1 Parity through M7 Release with every phase, the at-a-glance table runs to N12b with each design session beside the phase it gates, and N7a–N12b have outline specs (needs, first result, done when) taken from the parked roadmap.
